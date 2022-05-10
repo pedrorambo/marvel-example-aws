@@ -16,8 +16,7 @@ export const getFavoriteComicsService = async params => {
  * @return {Promise<void>}
  */
 export const setFavoriteComicService = async params => {
-  const { data: response } = await api.post('/', { params })
-  return response
+  await api.post('/', { params })
 }
 
 /**
@@ -26,6 +25,5 @@ export const setFavoriteComicService = async params => {
  * @return {Promise<void>}
  */
 export const deleteFavoriteComicService = async params => {
-  const { data: response } = await api.delete("/", { params })
-  return response
+  await api.delete("/", { params })
 }
