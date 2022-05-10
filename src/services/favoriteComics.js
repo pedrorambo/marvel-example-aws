@@ -13,6 +13,16 @@ export const getFavoriteComicsService = async params => {
 /**
  * 
  * @param {{userId: string, comicId: string}} params
+ * @return {Promise<boolean>} If the comic is favorite
+ */
+export const isFavoriteComicService = async params => {
+  const favoriteComicIds = await getFavoriteComicsService(params)
+  return favoriteComicIds.includes(params.comicId)
+}
+
+/**
+ * 
+ * @param {{userId: string, comicId: string}} params
  * @return {Promise<void>}
  */
 export const setFavoriteComicService = async params => {
