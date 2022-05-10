@@ -1,4 +1,4 @@
-import api from './persistenceApi'
+import api from './favoriteComicsApi'
 
 /**
  * 
